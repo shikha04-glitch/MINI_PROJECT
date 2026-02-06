@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>Admin Dashboard</h2>
+    <div>
+      <a href="map.html">View Map</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- STEP 1 -->
+    <div class="card">
+      <h3>STEP 1: Create Disaster Event</h3>
+      <input type="text" id="disasterType" placeholder="Disaster Type (Flood, Earthquake)">
+      <input type="text" id="disasterLocation" placeholder="Location">
+      <select id="disasterSeverity">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="createEventBtn">Create Event</button>
+
+      <table id="eventTable">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Severity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <table id="eventTable">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Location</th>
+      <th>Severity</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+    <!-- STEP 2 -->
+    <div class="card">
+      <h3>STEP 2: Upload Available Resources</h3>
+      <input type="text" id="resourceType" placeholder="Resource Type">
+      <input type="number" id="resourceQuantity" placeholder="Quantity">
+      <input type="text" id="resourceLocation" placeholder="Location">
+      <input type="text" id="resourceUnit" placeholder="Unit (kg, boxes, packets)">
+
+      <select id="resourceStatus">
+        <option value="Available">Available</option>
+        <option value="In Transit">In Transit</option>
+      </select>
+      <button id="addResourceBtn">Add Resource</button>
+
+      <table id="resourceTable">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Qty</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <table id="resourceTable">
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Qty</th>
+      <th>Location</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+    <!-- STEP 4 -->
+    <div class="card">
+      <h3>STEP 4: Allocation Requests</h3>
+      <table id="requestTable">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Quantity</th>
+            <th>Area</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="card">
+      <h3>STEP 5: Monitoring & Tracking</h3>
+      <table id="trackingTable">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Sent To</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <canvas id="resourceChart" height="120"></canvas>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>

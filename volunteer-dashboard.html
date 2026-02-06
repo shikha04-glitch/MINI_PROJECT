@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>Volunteer Dashboard</h2>
+    <div>
+      <a href="map.html">View Map</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>Report Affected Area</h3>
+      <input type="text" id="areaName" placeholder="Area Name">
+      <input type="number" id="peopleCount" placeholder="People Affected">
+      <select id="urgency">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <input type="text" id="neededResource" placeholder="Required Resource">
+      <button onclick="submitRequest()">Submit Report</button>
+    </div>
+
+    <div class="card">
+      <h3>My Submitted Requests</h3>
+      <table id="volunteerTable">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>People</th>
+            <th>Urgency</th>
+            <th>Resource</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/volunteer.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NGO Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>NGO Dashboard</h2>
+    <div>
+      <a href="map.html">View Map</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>Add Available Resources</h3>
+      <input type="text" id="ngoResourceType" placeholder="Resource Type">
+      <input type="number" id="ngoResourceQty" placeholder="Quantity">
+      <input type="text" id="ngoResourceLocation" placeholder="Location">
+      <button onclick="addNgoResource()">Add Resource</button>
+    </div>
+
+    <div class="card">
+      <h3>My Resources</h3>
+      <table id="ngoResourceTable">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Qty</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="js/ngo.js"></script>
+</body>
+</html>
